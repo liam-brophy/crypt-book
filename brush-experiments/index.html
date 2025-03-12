@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Brush Experiments</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="controls">
+        <div class="brush-selector">
+            <label for="brush-type">Brush Type:</label>
+            <select id="brush-type">
+                <option value="crayon">Crayon</option>
+                <option value="watercolor">Watercolor</option>
+                <option value="pencil">Pencil</option>
+                <option value="living">Living Brush</option>
+            </select>
+        </div>
+        <div class="brush-size">
+            <label for="brush-size-slider">Size:</label>
+            <input type="range" id="brush-size-slider" min="1" max="50" value="10">
+            <span id="size-value">10</span>
+        </div>
+        <div class="brush-color">
+            <label for="brush-color-picker">Color:</label>
+            <input type="color" id="brush-color-picker" value="#ff4444">
+        </div>
+        <button id="clear-canvas">Clear Canvas</button>
+    </div>
+    
+    <canvas id="drawing-canvas"></canvas>
+    
+    <script src="scripts/brushes/base-brush.js"></script>
+    <script src="scripts/brushes/crayon-brush.js"></script>
+    <script src="scripts/brushes/watercolor-brush.js"></script>
+    <script src="scripts/brushes/pencil-brush.js"></script>
+    <script src="scripts/brushes/living-brush.js"></script>
+    <script src="scripts/brush-manager.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
